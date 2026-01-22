@@ -24,9 +24,9 @@
   {{- $routeName = $routeValues.name -}}
 {{- else -}}
   {{- if eq $rIndex 0 -}}
-    {{- $routeName = printf "%s-grpc" $fullName -}}
+    {{- $routeName = $fullName -}}
   {{- else -}}
-    {{- $routeName = printf "%s-grpc-%s" $fullName (toString (add $rIndex 1)) -}}
+    {{- $routeName = printf "%s-%s" $fullName (toString (add $rIndex 1)) -}}
   {{- end -}}
 {{- end -}}
 
